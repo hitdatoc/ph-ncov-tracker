@@ -1,4 +1,20 @@
+var caseData;
+
+function getData() {
+  
+  var database = firebase.database();
+
+  return firebase.database().ref('/cases').once('value').then(
+  	function(snapshot) {
+  	  console.log(snapshot);
+  	}
+  )
+}
+
 function initMap() {
+
+  getData();
+  
   // The location of Uluru
   var uluru = {lat: -25.344, lng: 131.036};
   // The map, centered at Uluru

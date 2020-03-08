@@ -17,6 +17,7 @@
     <script defer src="/__/firebase/init.js"></script>
 
     <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
@@ -51,7 +52,7 @@
         try {
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = '';
+          document.getElementById('load').remove();
         } catch (e) {
           console.error(e);
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
