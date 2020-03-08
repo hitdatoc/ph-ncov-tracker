@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +16,8 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
+    <script src="index.js"></script>
+
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
@@ -23,11 +26,15 @@
       }
     </style>
   </head>
+
   <body>
-    <div>
-      <p>test</p>
-    </div>
+    <div id="map"></div>
     <p id="load">Firebase SDK Loading&hellip;</p>
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvC7-kQKKVjZ1bJqdlmSbQg7MFtK2z4nY&callback=initMap">
+    </script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -52,4 +59,5 @@
       });
     </script>
   </body>
+
 </html>
